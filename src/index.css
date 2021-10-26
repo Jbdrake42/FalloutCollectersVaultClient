@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{
+  width: 100%;
+  height: 15vh;
+  background-color: red;
+  position: fixed;
+}
+
+.sidebar{
+  margin-top: 15vh;
+  float: left;
+  position: relative;
+  
+}
+
+.sidebar-route{
+  float: right;
+  background-color: springgreen;
+}
+
+.sidebar-list{
+  background-color: seagreen;
+  height: inherit;
+  width: 20vw;
+  float: left;
+}

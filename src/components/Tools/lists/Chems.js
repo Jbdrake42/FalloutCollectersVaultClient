@@ -1,0 +1,31 @@
+export const ChemArray = [
+    [`Addictol`, 3],
+[`Anti-Venom Balm`, 9],
+[`Berry Mentats`, 13],
+[`Buffout`, 14],
+[`Bufftats`, 25],
+[`Calmex`, 12],
+[`Day Tripper`, 6],
+[`Doctors Bag`, 12],
+[`Fury`, 10],
+[`Healing Powder`, 15],
+[`Jet`, 13],
+[`Med-X`, 12],
+[`Mentats`, 11],
+[`Mysterious Serum`, 15],
+[`Orange Mentats`, 14],
+[`Overdrive`, 13],
+[`Psycho (chem)`, 13],
+[`Psychobuff`, 20],
+[`Radaway`, 10],
+[`Rad-X`, 5],
+[`Rebound` ,8],
+[`Refreshing Beverage`, 37],
+[`Steady`, 8],
+[`Stimpak`, 28],
+[`Ultra Jet`, 25],
+[`X-111 Compound`, 30],
+[`X-Cell`, 17]
+]
+
+export default ChemArray
