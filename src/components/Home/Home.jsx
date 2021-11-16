@@ -8,7 +8,7 @@ class Home extends React.Component {
     render() { 
         return <div className="home">
         <div className="homeheader">
-            <h1>Welcome to the Fallout Wasteland warefare Vault!</h1>
+            <h1>Welcome to the Fallout Wasteland Warfare Vault!</h1>
             <img className="homeimg" alt="the cover art" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fstargazersworld.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F07%2FFallout-Wasteland-Warfare-RPG-Board-Game-News.jpg%3Ffit%3D1200%252C675%26ssl%3D1&f=1&nofb=1"></img>
         </div >
         <div className="homepara">
