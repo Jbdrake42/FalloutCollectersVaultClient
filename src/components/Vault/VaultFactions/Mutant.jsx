@@ -6,6 +6,8 @@ import {
     Input,
     Label
   } from 'reactstrap';
+import APIURL from "../../../helpers/environment";
+
 class Mutant extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +23,7 @@ class Mutant extends React.Component {
      UpdateSM = (e) => {
         e.preventDefault();
         let token = localStorage.getItem('token')
-        fetch(`http://localhost:3000/vault/SM/${this.props.Vault[0].id}`, {
+        fetch(`${APIURL}/vault/SM/${this.props.Vault[0].id}`, {
             method: 'PUT',
             body: JSON.stringify({vault:{ SM_CoreBox : this.state.SM_CoreBox, SM_Behemoth : this.state.SM_Behemoth, SM_Skirmishers: this.state.SM_Skirmishers, 
                 SM_Overlord : this.state.SM_Overlord, SM_Suicider : this.state.SM_Suicider, SM_Hammer : this.state.SM_Hammer, SM_Avaitor : this.state.SM_Avaitor}}),

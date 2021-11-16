@@ -11,7 +11,7 @@ import Survivors from "./VaultFactions/Survivors";
 import BOS from "./VaultFactions/BOS"
 import Mutant from "./VaultFactions/Mutant"
 import VaultHome from "./VaultHome";
-
+import APIURL from "../../helpers/environment";
 
 
 class Vault extends React.Component {
@@ -29,7 +29,7 @@ class Vault extends React.Component {
 
    
     fetchNCR = () => {
-        fetch("http://localhost:3000/vault/", {
+        fetch(`${APIURL}/vault/`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

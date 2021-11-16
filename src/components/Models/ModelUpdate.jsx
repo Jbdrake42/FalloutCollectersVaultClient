@@ -1,6 +1,6 @@
 import React from "react";
 import {Modal} from "reactstrap"
-
+import APIURL from "../../helpers/environment";
 class ModelUpdate extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +10,7 @@ class ModelUpdate extends React.Component {
     ModelUpdate = (event) => {
         event.preventDefault();
         let token = localStorage.getItem('token')
-        fetch(`http://localhost:3000/model/${this.props.modelToUpdate.id}`, {
+        fetch(`${APIURL}/model/${this.props.modelToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({model:{name: this.state.name, notes: this.state.notes, pic: this.state.pic}}),
             headers: new Headers({

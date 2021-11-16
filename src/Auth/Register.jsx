@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, FormGroup, Modal } from "reactstrap";
+import APIURL from '../helpers/environment'
 class Register extends React.Component {
     
     constructor(props) {
@@ -9,7 +10,7 @@ class Register extends React.Component {
 
     CreateVault = () => {
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/vault/", {
+        fetch(`${APIURL}/vault/`, {
             method: "Post",
             headers: new Headers({
                 'Content-Type': 'application/json',

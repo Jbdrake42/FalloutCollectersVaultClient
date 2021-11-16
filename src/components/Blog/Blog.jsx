@@ -2,7 +2,7 @@ import React from "react";
 import { FormGroup, Modal } from "reactstrap";
 import BlogCards from "./BlogTable";
 import BlogUpdate from "./BlogUpdate";
-
+import APIURL from "../../helpers/environment";
 class Blog extends React.Component {
     constructor(props) {
         super(props);
@@ -24,7 +24,7 @@ class Blog extends React.Component {
     fetchBlog = async() => {
         
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/blog/all", {
+        fetch(`${APIURL}/blog/all`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ class Blog extends React.Component {
             let token = localStorage.getItem('token')
             this.setState({toggle: false})
             e.preventDefault()
-            fetch("http://localhost:3000/blog/", {
+            fetch(`${APIURL}/blog/`, {
                 method: "POST",
                 body: JSON.stringify({blog:{title: this.state.title, subtitle: this.state.subtitle, author: localStorage.getItem("email"), blog : this.state.blog,  notes : this.state.notes }}),
                 headers: new Headers({

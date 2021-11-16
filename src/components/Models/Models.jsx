@@ -10,6 +10,7 @@ import {
     Redirect
 } from 'react-router-dom'
 import Gallery from "../Gallery/Gallery";
+import APIURL from "../../helpers/environment";
 class Models extends React.Component {
     constructor(props) {
         super(props);
@@ -24,7 +25,7 @@ class Models extends React.Component {
     
     fetchUser = () => {
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/user/", {
+        fetch(`${APIURL}/user/`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',
@@ -56,7 +57,7 @@ class Models extends React.Component {
         let token = localStorage.getItem('token')
         this.setState({toggle: false})
         e.preventDefault()
-        fetch("http://localhost:3000/model/", {
+        fetch(`${APIURL}/model/`, {
             method: "POST",
             body: JSON.stringify({model:{name: this.state.name,painter: localStorage.getItem("username"), notes: this.state.notes, pic: this.state.pic}}),
             headers: new Headers({

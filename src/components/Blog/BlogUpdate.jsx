@@ -1,6 +1,6 @@
 import React from "react";
 import { FormGroup, Modal } from "reactstrap";
-
+import APIURL from "../../helpers/environment";
 
 class BlogUpdate extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class BlogUpdate extends React.Component {
         let token = localStorage.getItem('token')
         this.setState({toggle: false})
         e.preventDefault()
-        fetch(`http://localhost:3000/blog/${this.props.blogToUpdate.id}`, {
+        fetch(`${APIURL}/${this.props.blogToUpdate.id}`, {
             method: "put",
             body: JSON.stringify({blog:{title: this.state.title, subtitle: this.state.subtitle, author: localStorage.getItem("email"), blog : this.state.blog,  notes : this.state.notes }}),
             headers: new Headers({

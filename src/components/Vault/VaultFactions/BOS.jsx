@@ -6,6 +6,7 @@ import {
     Input,
     Label
   } from 'reactstrap';
+  import APIURL from "../../../helpers/environment";
 class BOS extends React.Component {
     constructor(props) {
         super(props);
@@ -22,7 +23,7 @@ class BOS extends React.Component {
    UpdateBOS = (e) => {
     e.preventDefault();
     let token = localStorage.getItem('token')
-    fetch(`http://localhost:3000/vault/${this.props.Vault[0].id}`,{
+    fetch(`${APIURL}/vault/${this.props.Vault[0].id}`,{
         method: 'PUT',
         body: JSON.stringify({vault:{ BOS_CoreBox:this.state.BOS_CoreBox, BOS_Liberty_Prime: this.state.BOS_Liberty_Prime, NCR_BOS_ElderMaxon: this.state.BOS_ElderMaxon, 
             BOS_Cade_Danse  : this.state.BOS_Cade_Danse, BOS_FrontLine  : this.state.BOS_FrontLine, BOS_PowerArmor1  : this.state.BOS_PowerArmor1}}),

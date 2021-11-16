@@ -6,6 +6,7 @@ import {
     Input,
     Label
   } from 'reactstrap';
+  import APIURL from "../../../helpers/environment";
 class NCR extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,7 @@ class NCR extends React.Component {
     UpdateNCR = (e) => {
         e.preventDefault();
         let token = localStorage.getItem('token')
-        fetch(`http://localhost:3000/vault/${this.props.Vault[0].id}`,{
+        fetch(`${APIURL}/vault/${this.props.Vault[0].id}`,{
             method: 'PUT',
             body: JSON.stringify({vault:{ NCR_PromoRanger:this.state.NCR_PromoRanger, NCR_TopBrass: this.state.NCR_TopBrass, NCR_CoreBox: this.state.NCR_CoreBox, NCR_RangerPatrol  : this.state.NCR_RangerPatrol}}),
             headers: new Headers({

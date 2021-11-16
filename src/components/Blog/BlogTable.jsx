@@ -1,5 +1,5 @@
 import React from "react";
-
+import APIURL from "../../helpers/environment";
 
   class BlogCards extends React.Component {
       constructor(props) {
@@ -9,7 +9,7 @@ import React from "react";
 
        deleteBlog=(model)=> {
         let token = localStorage.getItem('token')
-            fetch(`http://localhost:3000/blog/${model.id}`,{
+            fetch(`${APIURL}/blog/${model.id}`,{
                 method: 'DELETE',
                 headers: new Headers({
                     'Content-Type': 'application/json',

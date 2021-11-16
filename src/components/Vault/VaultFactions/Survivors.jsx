@@ -6,6 +6,7 @@ import {
     Input,
     Label
   } from 'reactstrap';
+  import APIURL from "../../../helpers/environment";
 class Survivors extends React.Component {
     constructor(props) {
         super(props);
@@ -35,7 +36,7 @@ class Survivors extends React.Component {
     UpdateSVR = (e) => {
         e.preventDefault();
         let token = localStorage.getItem('token')
-        fetch(`http://localhost:3000/vault/SVR/${this.props.Vault[0].id}` ,{
+        fetch(`${APIURL}/vault/SVR/${this.props.Vault[0].id}` ,{
             method: 'PUT',
             body: JSON.stringify({vault:{ SVR_CoreBox :this.state.SVR_CoreBox , SVR_MinuteMen: this.state.SVR_MinuteMen, SVR_Vault: this.state.SVR_Vault, 
                 SVR_Boston : this.state.SVR_Boston, SVR_UnusualAllies  : this.state.SVR_UnusualAllies, SVR_SancturyHills  : this.state.SVR_SancturyHills, SVR_Lorenzo  : this.state.SVR_Lorenzo, SVR_NukaGirl  : this.state.SVR_NukaGirl, SVR_X01: this.state.SVR_X01}}),

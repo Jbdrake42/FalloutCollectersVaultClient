@@ -1,5 +1,5 @@
 import React from "react";
-
+import APIURL from "../../helpers/environment";
 import GalleryTable from "./GalleryTable"
 
 class Gallery extends React.Component {
@@ -14,7 +14,7 @@ class Gallery extends React.Component {
 
       fetchModels = () => {
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/model/all", {
+        fetch(`${APIURL}/model/all`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

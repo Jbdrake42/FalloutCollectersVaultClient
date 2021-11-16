@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, FormGroup, Modal } from "reactstrap";
-
+import APIURL from '../helpers/environment'
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +12,7 @@ class Login extends React.Component {
         console.log(this.state.email, this.state.password,)
     
         
-        fetch("http://localhost:3000/user/login", {
+        fetch(`${APIURL}/user/login`, {
             method: "POST",
             body: JSON.stringify({user:{email: this.state.email, password: this.state.password}}),
             headers: new Headers({
