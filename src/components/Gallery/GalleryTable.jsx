@@ -1,4 +1,5 @@
 import React from "react";
+import APIURL from "../../helpers/environment";
 import {
     Card,
     Button,
@@ -13,7 +14,7 @@ const GalleryTable = (props) => {
    
    function deleteModel(model) {
     let token = localStorage.getItem('token')
-        fetch(`http://localhost:3000/model/admin/${model.id}`,{
+        fetch(`${APIURL}/model/admin/${model.id}`,{
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

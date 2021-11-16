@@ -88,7 +88,7 @@ class Models extends React.Component {
     fetchModels = async() => {
         
         let token = localStorage.getItem('token')
-        fetch("http://localhost:3000/model/", {
+        fetch(`${APIURL}/model/`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',
