@@ -69,7 +69,10 @@ class Blog extends React.Component {
 
     render() { 
         return ( <div className="blog">
-            <button onClick={() => this.setState({toggle: true})}> Log a new model </button>
+            <div className="resourceHeader">
+            <h1>Blog</h1>
+            </div>
+            <button onClick={() => this.setState({toggle: true})}> Enter a new Blog </button>
                 <Modal className="center" isOpen={this.state.toggle} > 
                 <div>
                 <form onSubmit={this.CreateBlog} className="Modelsubmit">
@@ -84,19 +87,22 @@ class Blog extends React.Component {
                 
                 <FormGroup>
                 <label>Blog Body</label>
-                <input className="blogBody" onChange={(e) => this.setState({ blog : e.target.value})} ></input>
+                </FormGroup>
+                <FormGroup>
+                <textarea  rows="4" cols="50" onChange={(e) => this.setState({ blog : e.target.value})}  > </textarea>
+                
                 </FormGroup>
                 <FormGroup>
                 <label>notes</label>
                 <input onChange={(e) => this.setState({ notes : e.target.value})} ></input>
                 </FormGroup>
-                <button type="submit">Save miniture</button>
+                <button type="submit">Save Blog</button>
                 <button onClick={()=> this.setState({toggle: false})}>Close</button>
                 </form>
                 </div>
                 </Modal>
                 <BlogCards fetchBlog={this.fetchBlog} blogs={this.state.blogs} editUpdateBlog={this.editUpdateblog} updateOn={this.updateOn}  />
-                hello from blog
+                
                 {this.state.updateActive ? <BlogUpdate fetchBlog={this.fetchBlog} blogToUpdate={this.state.blogToUpdate} updateOff={this.updateOff}/> : <> </>}
             </div>
          );

@@ -203,7 +203,7 @@ class RandomTrader2 extends React.Component {
         return ( 
             <div className="randomTrader">
             <h3>Random Trader inventory Generator </h3>
-            <button onClick={this.toggle}>trader me</button>
+            <button onClick={this.toggle}>Generate Trader Inventory</button>
             {this.traderInventorize()}
         </div>
          );

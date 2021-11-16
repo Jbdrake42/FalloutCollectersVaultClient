@@ -101,13 +101,21 @@ class Models extends React.Component {
    
     render() { 
         return <div className="models">
-            hellos from models
-            <button onClick={() => this.setState({toggle: true})}> Log a new model </button>
+            
+            
             
             <Router>
-                <div>
-            <Link to="/model">Your Models</Link>
-            <Link to="/gallery">The Gallery</Link>
+                
+                <div className="vaultbar">
+                <div className="vaultChild">
+            <Link to="/model"><h1>Your Models</h1></Link>
+                </div>
+                <div className="vaultChild">
+            <button onClick={() => this.setState({toggle: true})}> Log a new model </button>
+            </div>
+            <div className="vaultChild">
+            <Link to="/gallery"><h1>The Gallery</h1></Link>
+            </div>
             
             </div>
             <Switch>
@@ -126,7 +134,8 @@ class Models extends React.Component {
                 </FormGroup>
                 <FormGroup>
                 <label>Notes</label>
-                <input onChange={(e) => this.setState({ notes : e.target.value})} ></input>
+                <textarea onChange={(e) => this.setState({ notes : e.target.value})} name="w3review" rows="4" cols="50"> </textarea>
+                
                 </FormGroup>
                 <FormGroup>
                 <label>picture</label>

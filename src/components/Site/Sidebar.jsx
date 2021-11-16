@@ -43,7 +43,7 @@ class Sidebar extends React.Component {
         <div className="sidebar-list">
             <div className="sidebarbar">
            
-           <ul>
+           <ul className="sidebarlist">
                <li><Link to="/home">Home</Link></li>
                <li><Link to="/blog">Blog</Link></li>
                <li><Link to="/vault">Vault</Link></li>

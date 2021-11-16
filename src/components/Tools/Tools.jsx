@@ -8,7 +8,11 @@ class Tools extends React.Component {
     }
     render() { 
         return (
-        <div>
+            
+        <div className="Tool">
+            <div className="resourceHeader">
+            <h1>Tools</h1>
+            </div>
             <RandomLoot />
             <RandomTrader2 />
         </div>)

@@ -14,8 +14,8 @@ ul {
 
 li {
   padding-top: 3px;
-  font-size: large;
-  border: 2px solid black;
+  font-size: x-large;
+  
 }
 
 code {
@@ -26,6 +26,13 @@ code {
 button {
   background-color: gold;
   color: #5252ff;
+  font-weight: bolder;
+  
+}
+
+.sidebarlist li {
+  margin-left: -20px;
+  color: gold;
 }
 
 .center {
@@ -131,6 +138,8 @@ button {
   text-align: center;
 }
 
+
+
 .auth{
   float: right;
 }
@@ -183,11 +192,13 @@ button {
   left: 50%;
   top: 50%;
   vertical-align: middle;
+  display: flex;
 }
 
 .vaultcell{
   border: 5px solid black;
   display: flex;
+  
 }
 
 .vaultcell img {
@@ -210,14 +221,18 @@ button {
   text-align: center;
   display: flex;
   text-align: center;
+  
 }
 
 .vaultbar Link {
   margin-left: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .vaultChild{
-  margin-left: 5vw;
+  
+  flex: auto;
 }
 .resourcechild{
   border-bottom: 2px solid black;
@@ -227,32 +242,32 @@ button {
   text-align: center;
   font-size: 35px;
   border-bottom: 2px solid black;
-}
-
-.homeheader {
-  text-align: center;
+  text-decoration: none;
   
 }
+
+
 
 /* .blogBody{
   width: 40vw;
   height: 40vh;
 } */
 
-.homeimg{
-  
-  height: auto
-}
+
 
 /* .resource{
   
 } */
 .randomTrader{
   margin-top: 10px;
-  /* margin-left: 50%; */
-  /* margin-right: 50%; */
+  /* margin-left: 50%;
+  margin-right: 50%; */
   text-align: center;
-  margin: auto;
+  
+}
+
+.randomTrader table {
+  margin-left: 45%;
 }
 .blog{
   width: 100%;
@@ -261,4 +276,42 @@ button {
 .VaultButton{
   float:right
 
+}
+
+.tool{
+  display: inline;
+}
+.home {
+  text-align: center;
+  width: 50vw;
+  margin-left: 20%;
+}
+
+.homeheader {
+  text-align: center;
+  margin-right: -10%;
+}
+.homepara {
+  text-align: center;
+  width: 50vw;
+  
+}
+
+.homeimg{
+  /* margin-right: -10vw; */
+  height: auto; 
+  /* width: 100% */
+}
+
+.logout{
+  margin-top: 35px;
+  margin-right: 20px;
+}
+
+.blogBody{
+  border-bottom: solid black 2px ;
+}
+
+.blogtop{
+  border-bottom: solid black 2px ;
 }

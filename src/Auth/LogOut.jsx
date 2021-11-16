@@ -8,8 +8,8 @@ class LogOut extends React.Component {
         window.location.reload(false);
       }
     render() { 
-        return <div>
-            <p>Log me out bitch</p>
+        return <div class="logout">
+            
             <button onClick={this.cleartoken}>log out</button>
         </div>;
     }

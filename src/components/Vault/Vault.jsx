@@ -51,19 +51,19 @@ class Vault extends React.Component {
         <Router>
             <div className="vaultbar">
             <div className="vaultChild"> 
-            <Link to="/overview"><h5>Faction Overview</h5></Link>
+            <Link to="/overview"><h1>Faction Overview</h1></Link>
             </div>
             <div className="vaultChild"> 
-            <Link to="/suvive"><h5>Survivors</h5></Link>
+            <Link to="/suvive"><h1>Survivors</h1></Link>
             </div>
             <div className="vaultChild"> 
-            <Link to="/bos"><h5>Brotherhood of Steel</h5></Link>
+            <Link to="/bos"><h1>Brotherhood of Steel</h1></Link>
             </div>
             <div className="vaultChild"> 
-            <Link to="/sm"><h5>Supermutants</h5></Link>
+            <Link to="/sm"><h1>Supermutants</h1></Link>
             </div>
             <div className="vaultChild"> 
-            <Link to="/ncr"> <h5>New California Republic</h5></Link>
+            <Link to="/ncr"> <h1>New California Republic</h1></Link>
             </div>
             </div>
             <Switch>

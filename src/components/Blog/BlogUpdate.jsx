@@ -23,6 +23,7 @@ class BlogUpdate extends React.Component {
         ).then((data) => {
             console.log(data)
             this.props.fetchBlog()
+            this.props.updateOff()
         })
     }
     render() { 
@@ -49,7 +50,7 @@ class BlogUpdate extends React.Component {
                 <input onChange={(e) => this.setState({ notes : e.target.value})} ></input>
                 </FormGroup>
                 <button type="submit">Update</button>
-                <button onClick={()=> this.setState({toggle: false})}>Close</button>
+                <button onClick={()=> {this.props.updateOff()}}>Close</button>
                 </form>
                 </div>
                 </Modal>

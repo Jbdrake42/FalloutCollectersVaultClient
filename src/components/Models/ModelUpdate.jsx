@@ -35,9 +35,7 @@ class ModelUpdate extends React.Component {
                 <input onChange={(e) => this.setState({ name : e.target.value})} ></input>
                 <label>Notes</label>
                 <input onChange={(e) => this.setState({ notes : e.target.value})} ></input>
-                <label>picture</label>
-                <input type="file" name="file" placeholder= "Upload image here" onChange={this.upload} ></input>
-                
+                               
                 <button type="submit">Update Miniture</button>
                 <button onClick={()=> this.setState({toggle: false})}>Close</button>
                 </form>

@@ -6,12 +6,12 @@ class Home extends React.Component {
         this.props.QuoteatizeMeCaptain()
     }
     render() { 
-        return <div>
+        return <div className="home">
         <div className="homeheader">
             <h1>Welcome to the Fallout Wasteland warefare Vault!</h1>
             <img className="homeimg" alt="the cover art" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fstargazersworld.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F07%2FFallout-Wasteland-Warfare-RPG-Board-Game-News.jpg%3Ffit%3D1200%252C675%26ssl%3D1&f=1&nofb=1"></img>
-        </div>
-        <div>
+        </div >
+        <div className="homepara">
             <h3>What is Fallout?</h3>
         <p> Fallout is a mostly videogame franchize about a post apocalypse America. Created by black isle Studios in 1997 as a spiritual successor to Wasteland, a 1988 rpg video game, 
             fallout started out as an isometric rpg, and was later a 3d action rpg after being purchased by Bethesda softworks  </p>

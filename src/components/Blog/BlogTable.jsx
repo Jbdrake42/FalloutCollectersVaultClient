@@ -25,7 +25,7 @@ import React from "react";
                   <div className="blogBody">
                       <h1>{blog.title}</h1>
                       <h3>{blog.subtitle}</h3>
-                      <h4>written by: {blog.author}</h4>
+                      <h4 className="blogtop">written by: {blog.author}</h4>
                       <p>{blog.blogbody}</p>
                       <p>{blog.notes}</p>
                       {localStorage.getItem("role")=== "admin" ? <button onClick={() => {this.deleteBlog(blog)}}>delete blog</button> : <></>}
