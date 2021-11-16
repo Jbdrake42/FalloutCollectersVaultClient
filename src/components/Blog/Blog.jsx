@@ -73,7 +73,6 @@ class Blog extends React.Component {
             <h1>Blog</h1>
             </div>
             {localStorage.getItem("role")=== "admin" ? <button onClick={() => this.setState({toggle: true})}> Enter a new Blog </button> : <></>}
-            <button onClick={() => this.setState({toggle: true})}> Enter a new Blog </button>
                 <Modal className="center" isOpen={this.state.toggle} > 
                 <div>
                 <form onSubmit={this.CreateBlog} className="Modelsubmit">
