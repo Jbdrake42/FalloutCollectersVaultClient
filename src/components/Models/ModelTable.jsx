@@ -12,7 +12,7 @@ const ModelTable = (props) => {
    
    function deleteModel(model) {
     let token = localStorage.getItem('token')
-        fetch(`${APIURL}/${model.id}`,{
+        fetch(`${APIURL}/model/${model.id}`,{
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
