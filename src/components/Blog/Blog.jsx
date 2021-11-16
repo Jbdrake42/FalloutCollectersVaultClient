@@ -72,6 +72,7 @@ class Blog extends React.Component {
             <div className="resourceHeader">
             <h1>Blog</h1>
             </div>
+            {localStorage.getItem("role")=== "admin" ? <button onClick={() => this.setState({toggle: true})}> Enter a new Blog </button> : <></>}
             <button onClick={() => this.setState({toggle: true})}> Enter a new Blog </button>
                 <Modal className="center" isOpen={this.state.toggle} > 
                 <div>

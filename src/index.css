@@ -299,6 +299,7 @@ button {
 
 .homeimg{
   /* margin-right: -10vw; */
+  width: 50%;
   height: auto; 
   /* width: 100% */
 }
