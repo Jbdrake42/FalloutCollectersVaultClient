@@ -51,7 +51,7 @@ class Mutant extends React.Component {
     }
     render() { 
         return ( <div>
-            <Modal isOpen={this.state.UpdateSMOn}>
+            <Modal className="center" isOpen={this.state.UpdateSMOn}>
                 <Form onSubmit={this.UpdateSM} className="vaultupdate">
                     <FormGroup>
                         <Label>Super Mutants Core Box</Label>

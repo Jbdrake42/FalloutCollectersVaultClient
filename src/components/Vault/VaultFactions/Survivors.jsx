@@ -52,7 +52,7 @@ class Survivors extends React.Component {
     }
     render() { 
         return ( <div>
-            <Modal isOpen={this.state.updateSVROn}>
+            <Modal className="center" isOpen={this.state.updateSVROn}>
                 <Form onSubmit={this.UpdateSVR} className="vaultupdate">
                     <FormGroup>
                         <Label>Survivors Core Box</Label>

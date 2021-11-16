@@ -60,7 +60,7 @@ class NCR extends React.Component {
 
     render() { 
         return <div>
-            <Modal isOpen={this.state.updateNCROn} >
+            <Modal className="center" isOpen={this.state.updateNCROn} >
                 <Form onSubmit={this.UpdateNCR} className="vaultupdate">
                     <FormGroup>
                         <Label>NCR Core Box</Label>

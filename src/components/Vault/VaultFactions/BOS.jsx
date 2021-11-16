@@ -53,7 +53,7 @@ class BOS extends React.Component {
         return ( <div>
               
               
-                <Modal isOpen={this.state.updateBOSOn}>
+                <Modal className="center" isOpen={this.state.updateBOSOn}>
                 <Form onSubmit={this.UpdateBOS} className="vaultupdate">
                     <FormGroup>
                         <Label>Brotherhood of Steel Core Game Box</Label>
