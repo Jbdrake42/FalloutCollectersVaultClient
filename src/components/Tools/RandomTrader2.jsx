@@ -1,28 +1,33 @@
-import React from 'react';
-import {AlcoholArray} from '../lists/Alcohol'
-import {ArmorArray} from '../lists/Armor'
-import {ChemArray} from '../lists/Chems'
-import {ClothingArray} from '../lists/Clothing'
-import {FoodArray} from '../lists/Food'
-import {GearArray} from '../lists/Gear'
-import {HeavyArray} from '../lists/HeavyWeapons'
-import {MeleeArray} from '../lists/Melee'
-import {MineArray} from '../lists/Mines'
-import {PistolArray} from '../lists/Pistols'
-import {PowerArmorArray} from '../lists/PowerArmor'
-import {RifleArray} from '../lists/Rifles'
-import {ThrowArray} from '../lists/Throw'
-
-const Returntradloot = () => {
-  
-    function randomNumber(min, max) {
-        let step1 = max - min + 1;
-        let step2 = Math.random() * step1;
-        let result = Math.floor(step2) + min
-        return result
-      }
-
-let firstnum = randomNumber(0,12)
+import React from "react";
+import {AlcoholArray} from './lists/Alcohol'
+import {ArmorArray} from './lists/Armor'
+import {ChemArray} from './lists/Chems'
+import {ClothingArray} from './lists/Clothing'
+import {FoodArray} from './lists/Food'
+import {GearArray} from './lists/Gear'
+import {HeavyArray} from './lists/HeavyWeapons'
+import {MeleeArray} from './lists/Melee'
+import {MineArray} from './lists/Mines'
+import {PistolArray} from './lists/Pistols'
+import {PowerArmorArray} from './lists/PowerArmor'
+import {RifleArray} from './lists/Rifles'
+import {ThrowArray} from './lists/Throw'
+class RandomTrader2 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { traderActive: false }
+    }
+    toggle = () => {this.setState({traderActive : !this.state.traderActive})
+    console.log(this.state.traderActive)
+};
+    Returntradloot = () => {
+        function randomNumber(min, max) {
+            let step1 = max - min + 1;
+            let step2 = Math.random() * step1;
+            let result = Math.floor(step2) + min
+            return result
+          }
+    let firstnum = randomNumber(0,12)
         switch(firstnum){
         case 0:
             console.log('Alcohol') 
@@ -34,7 +39,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+       
         case 1:
             console.log('Armor')
             return (
@@ -45,7 +50,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+       
         case 2:
             console.log('chem')
             return (
@@ -56,7 +61,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+       
         case 3:
             console.log('clothing')
             return (
@@ -67,7 +72,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+     
         case 4:
             console.log('food')
             return (
@@ -78,7 +83,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+    
         case 5:
             console.log('gear')
             return (
@@ -89,7 +94,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+     
         case 6:
             console.log('heavy weapon')
             return (
@@ -100,7 +105,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+    
         case 7:
             console.log('melee')
             return (
@@ -111,7 +116,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+     
         case 8:
             console.log('mines')
             return (
@@ -122,7 +127,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+     
         case 9:
             console.log('pistol')
             return (
@@ -133,7 +138,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+     
         case 10:
             console.log('Power Armor')
             return (
@@ -144,7 +149,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+       
         case 11:
             console.log('Rifle')
             return (
@@ -155,7 +160,7 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+      
         case 12:
             console.log('Thow')
             return (
@@ -166,9 +171,43 @@ let firstnum = randomNumber(0,12)
                 </tr>
                 </>
             )
-        break;
+        default:
         
     }}
 
-    export default Returntradloot
+    traderInventorize = () => {
+        
+        for( let i = 0; i < 10; i++){
     
+            return (
+                <table className="tradtable">
+                    <tr>
+                    <td>Item</td>
+                    <td>Caps</td>
+                </tr>
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    {this.Returntradloot(i)}
+                    </table>
+            )
+        }
+    }
+    render() { 
+        return ( 
+            <div className="randomTrader">
+            <h3>Random Trader inventory Generator </h3>
+            <button onClick={this.toggle}>trader me</button>
+            {this.traderInventorize()}
+        </div>
+         );
+    }
+}
+ 
+export default RandomTrader2;

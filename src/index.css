@@ -5,6 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightblue
+}
+
+ul {
+  list-style: outside none none;
+}
+
+li {
+  padding-top: 3px;
+  font-size: large;
+  border: 2px solid black;
 }
 
 code {
@@ -12,28 +23,242 @@ code {
     monospace;
 }
 
-.header{
-  width: 100%;
-  height: 15vh;
-  background-color: red;
-  position: fixed;
+button {
+  background-color: gold;
+  color: #5252ff;
 }
 
+.center {
+    position: fixed;
+    left: 50vw;
+    bottom: 50vh;
+    /* transform: translate(-50%, -50%); */
+    background-color: lightslategray;
+    border: solid black 3px;
+    z-index: 3;
+    
+
+}
+
+.modellogpick{
+  height: 25px;
+}
+
+.cardWrapper{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  border: 3px solid gold;
+   max-width: 15vw;
+  background-color: #5252ff;
+  color: gold;
+  flex: auto;
+  flex-basis: 50%
+}
+
+.card img{
+  width: 13vw;
+  border: 3px solid gold;
+  
+}
+
+.CardText {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.center button {
+  margin-left: 40%;
+  width: 50px;
+}
+
+.app{
+  display: inline-flex;
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  background-color: gold;
+  position: fixed;
+  text-align: center;
+  border-bottom: 3px solid black;
+  z-index:2;
+}
+
+.header-barbar{
+  width: 100%;
+  height: 90px;
+  background-color: #5252ff;
+  position: sticky;
+  text-align: center;
+  border-bottom: 3px solid black
+}
+.header img {
+  
+  height: 90px;
+ 
+}
+
+/* .headerimg{
+  width: 50px;
+} */
+
 .sidebar{
-  margin-top: 15vh;
+  margin-top: 100px;
   float: left;
   position: relative;
+  flex: auto;
   
 }
 
 .sidebar-route{
+  position: relative;
+  background-color: lightblue;
+  width: 92vw;
+  height: 100%;
+  margin-left: 150px;
+  flex: auto;
+  z-index:1;
+  margin-top: -7vh;
+  
+  padding-top: 5vh;
+  /* padding-left: 20vw; */
+  /* padding-right: 20vw; */
+  text-align: center;
+}
+
+.auth{
   float: right;
-  background-color: springgreen;
 }
 
 .sidebar-list{
-  background-color: seagreen;
-  height: inherit;
-  width: 20vw;
+  background-color: gold;
+  height: 100vh;
+  width: 150px;
   float: left;
+  position: fixed;
+  border-right: 3px solid black;
+  z-index:2;
+  color: gold;
+  border-top: 3px solid black;
+}
+
+.sidebar-list ul {
+  padding-top: 10vh;
+}
+
+.sidebarbar{
+  margin-top: -17px;
+  height: 100vh;
+  /* /* float: left; */
+  width: 140px; 
+  background-color: #5252ff;
+  border-right: 3px solid black;
+  
+  
+}
+
+.models{
+  width: 100vw;
+}
+
+.Modelsubmit{
+  border: 2px black;
+}
+
+
+
+.check{
+  height: 5vh;
+  width: 5vw;
+}
+
+.vaultupdate{
+  border: 3px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  vertical-align: middle;
+}
+
+.vaultcell{
+  border: 5px solid black;
+  display: flex;
+}
+
+.vaultcell img {
+  border: grey solid 2px;
+
+}
+
+.vaultcellleft{
+  float: left;
+  
+  padding-left: 10%;
+}
+.vaulcellright{
+  padding-right: 20%;
+  padding-left: 20%;
+  
+}
+
+.vaultbar {
+  text-align: center;
+  display: flex;
+  text-align: center;
+}
+
+.vaultbar Link {
+  margin-left: 5%;
+}
+
+.vaultChild{
+  margin-left: 5vw;
+}
+.resourcechild{
+  border-bottom: 2px solid black;
+}
+
+.resourceHeader{
+  text-align: center;
+  font-size: 35px;
+  border-bottom: 2px solid black;
+}
+
+.homeheader {
+  text-align: center;
+  
+}
+
+/* .blogBody{
+  width: 40vw;
+  height: 40vh;
+} */
+
+.homeimg{
+  
+  height: auto
+}
+
+/* .resource{
+  
+} */
+.randomTrader{
+  margin-top: 10px;
+  /* margin-left: 50%; */
+  /* margin-right: 50%; */
+  text-align: center;
+  margin: auto;
+}
+.blog{
+  width: 100%;
+}
+
+.VaultButton{
+  float:right
+
 }
