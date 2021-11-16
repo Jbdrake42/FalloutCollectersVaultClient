@@ -45,7 +45,7 @@ class Register extends React.Component {
         console.log(this.state.email, this.state.password, this.state.admin)
     
         
-        await fetch("http://localhost:3000/user/register", {
+        await fetch(`${APIURL}/user/register`, {
             method: "POST",
             body: JSON.stringify({user:{email: this.state.email, username: this.state.username, password: this.state.password, role: this.state.role}}),
             headers: new Headers({
